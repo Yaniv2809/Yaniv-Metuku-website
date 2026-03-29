@@ -32,22 +32,24 @@ export const PORTFOLIO_DATA = {
 
   projects: [
     {
-      title: "Financial Integrity Ecosystem", // Fallback example, representing atid.store or similar
+      title: "Financial Integrity Ecosystem",
       badge: "FLAGSHIP PROJECT",
       badgeColor: "cyan",
-      description: "A comprehensive multi-layer test automation framework targeting financial/e-commerce applications. Implements API validation, UI automation, and deep exploratory testing with programmatic test generation.",
-      techStack: ["Python", "Playwright", "Postman", "GitHub Actions", "Gemini API"],
+      description: "End-to-end test automation framework that mathematically proves data integrity across a financial system (Expense Tracker) — validating that data entered via the UI arrives intact in the database. Not just status 200. Built solo: architecture, design, and execution.",
+      techStack: ["Python", "Pytest", "Playwright", "Appium", "Flask", "MySQL", "Docker", "GitHub Actions", "Allure", "Groq AI"],
       architectureHighlights: [
-        "API Level: Deep data validation and workflow sequencing via Postman",
-        "UI Level: Playwright automation for critical user journeys",
-        "AI Integration: Programmatic test generation using Gemini",
-        "CI/CD native pipeline execution and reporting"
+        "4-Layer coverage: Web (Playwright), API (Flask+Requests), Mobile (Appium/UiAutomator2), Database (MySQL+SQLite)",
+        "Set Theory validation: new_set - old_set = exact record added — mathematical proof of data completeness",
+        "AI Failure Analysis: automatic root-cause analysis on every test failure via Groq LLM",
+        "DDT: Data-Driven Testing with external CSV + JSON — zero hardcoded values",
+        "CI/CD: GitHub Actions → Allure Reports → GitHub Pages",
+        "Mobile tested on a real physical device — not an emulator"
       ],
       metrics: [
-        { label: "Test Cases", value: "97+" },
-        { label: "Bugs Intercepted", value: "12" },
-        { label: "Automation", value: "100%" },
-        { label: "Layers", value: "Web+API" }
+        { label: "Automated Tests", value: "53" },
+        { label: "Test Layers", value: "4" },
+        { label: "Bugs Found", value: "3" },
+        { label: "Test Files", value: "9" }
       ],
       githubUrl: "https://github.com/Yaniv2809/Financial-Integrity-Ecosystem",
       diagramType: "architecture"

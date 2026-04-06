@@ -105,7 +105,7 @@ export const PORTFOLIO_DATA = {
   experience: [
     {
       date: "2020 – 2022",
-      title: "Planner & Logistics Controller",
+      title: "Planner & Logistics Controller(Deputy Team Lead)",
       company: "IDF — Masha 7200",
       description: "Managed end-to-end inventory processes in a mission-critical military environment using SAP ERP.",
       highlights: [

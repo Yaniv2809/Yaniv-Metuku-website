@@ -2,18 +2,18 @@ export const PORTFOLIO_DATA = {
   personalInfo: {
     name: "Yaniv Metuku",
     title: "AI-Powered QA Automation Engineer",
-    tagline: "I don't just find bugs. I build automated, AI-driven safety nets that protect business revenue.",
+    tagline: "2 PyPI packages shipped. 53 automated tests across 4 layers. AI-powered failure analysis built in. All before my first full-time QA role.",
     email: "yaniv2809@gmail.com",
-    phone: "", 
+    phone: "",
     location: "Israel",
     github: "https://github.com/Yaniv2809",
-    linkedin: "https://linkedin.com/in/yaniv-metuku/",
+    linkedin: "https://www.linkedin.com/in/yaniv-metuku/",
     profileImage: "/avatar.png",
-    cvDownloadLink: "#" 
+    cvDownloadLink: "/Yaniv-Metuku-CV.pdf"
   },
-  
+
   about: {
-    description: "I approach quality assurance as a strategic business function, not just a checkbox. With expertise spanning API testing, CI/CD automation, and AI-powered failure analysis (using tools like Gemini and Ollama), I build testing ecosystems that catch issues before they reach production. I focus on \"Shift-Left\" methodologies, ensuring every commit transitions software from 'working' to 'bulletproof'.",
+    description: "I approach quality assurance as a strategic business function, not just a checkbox. With expertise spanning API testing, CI/CD automation, and AI-powered failure analysis (using Groq LLM), I build testing ecosystems that catch issues before they reach production. I focus on \"Shift-Left\" methodologies, ensuring every commit transitions software from 'working' to 'bulletproof'.",
     stats: [
       { number: 120, label: "Test Cases Automated", icon: "CheckCircle", suffix: "+" },
       { number: 4, label: "Testing Layers", icon: "Layers", suffix: "" },
@@ -24,9 +24,9 @@ export const PORTFOLIO_DATA = {
 
   skills: {
     automation: ["Python", "Pytest", "Playwright", "Selenium", "Appium"],
-    apiData: ["Postman", "REST APIs", "SQL", "Data Validation"],
+    apiData: ["Postman", "REST APIs", "SQL", "MySQL", "MongoDB", "Data Validation"],
     devops: ["GitHub Actions", "Docker", "Jenkins", "CI/CD Pipelines"],
-    ai: ["Gemini API", "Local LLMs (Ollama)", "Vibe Coding", "AI Failure Analysis"],
+    ai: ["Groq API", "Local LLMs (Ollama)", "Prompt Engineering", "AI Failure Analysis"],
     management: ["Jira", "Xray", "Test Strategy", "Root Cause Analysis"]
   },
 
@@ -52,51 +52,100 @@ export const PORTFOLIO_DATA = {
         { label: "Test Files", value: "9" }
       ],
       githubUrl: "https://github.com/Yaniv2809/Financial-Integrity-Ecosystem",
+      allureUrl: "https://yaniv2809.github.io/Financial-Integrity-Ecosystem/",
       diagramType: "architecture"
     },
     {
-      title: "Failscope (AI Assistant)",
-      badge: "PYTHON TOOL",
+      title: "Failscope",
+      badge: "PyPI PACKAGE",
       badgeColor: "emerald",
-      description: "A local Python utility leveraging Ollama for secure, offline data analysis and prompt engineering of test failures without compromising proprietary company code.",
-      techStack: ["Python", "Ollama", "Local LLMs", "Log Parsing"],
+      description: "A published PyPI package (v0.1.1) that auto-analyzes test failures using a dual-agent AI pipeline powered by Groq/Llama. Reads pytest logs, classifies failure type, and generates structured bug reports — all from a single CLI command.",
+      techStack: ["Python", "Groq API", "Llama", "Dual-Agent Pipeline", "PyPI", "Log Parsing", "CLI"],
       architectureHighlights: [
-        "Local execution: Zero data leakage via offline LLM inference",
-        "Smart Log Preprocessing: Cleans and structures logs before analysis",
-        "Cost-Optimized: Runs purely on local hardware",
-        "Generates actionable bug resolution templates"
+        "Dual-agent pipeline: Agent 1 classifies failure type, Agent 2 generates actionable resolution",
+        "Published to PyPI v0.1.1 — installable via pip install failscope",
+        "Smart Log Preprocessing: Cleans and structures pytest logs before LLM analysis",
+        "Zero data leakage option: supports local Ollama for offline inference",
+        "Generates structured bug report templates ready to paste into Jira"
       ],
       metrics: [
-        { label: "Stage", value: "MVP" },
-        { label: "Cost", value: "$0" },
-        { label: "Security", value: "Offline" },
-        { label: "Accuracy", value: "High" }
+        { label: "PyPI Version", value: "v0.1.1" },
+        { label: "LLM Backend", value: "Groq" },
+        { label: "Agents", value: "2" },
+        { label: "Install", value: "pip" }
       ],
-      githubUrl: "https://github.com/Yaniv2809",
+      githubUrl: "https://github.com/Yaniv2809/Failscope",
+      pypiUrl: "https://pypi.org/project/failscope/",
+      diagramType: "pipeline"
+    },
+    {
+      title: "TestAxiom",
+      badge: "PyPI PACKAGE",
+      badgeColor: "violet",
+      description: "A published Python testing utility package on PyPI. Built to streamline test assertion patterns and reduce boilerplate in Pytest-based automation projects — making test code cleaner, more readable, and easier to maintain.",
+      techStack: ["Python", "Pytest", "PyPI", "Test Utilities"],
+      architectureHighlights: [
+        "Published to PyPI — installable via pip install testaxiom",
+        "Reduces assertion boilerplate across Pytest test suites",
+        "Designed for integration with existing automation frameworks",
+        "Complements Playwright and Requests-based test layers"
+      ],
+      metrics: [
+        { label: "Platform", value: "PyPI" },
+        { label: "Language", value: "Python" },
+        { label: "Type", value: "Utility" },
+        { label: "Install", value: "pip" }
+      ],
+      githubUrl: "https://github.com/Yaniv2809/TestAxiom",
+      pypiUrl: "https://pypi.org/project/testaxiom/",
       diagramType: "pipeline"
     }
   ],
 
   experience: [
     {
-      date: "2024 - Present",
-      title: "AI-Powered QA Engineer — Independent Portfolio",
-      description: "Designing and developing production-grade automated testing frameworks targeting real-world applications (like e-commerce platforms).",
+      date: "2020 – 2022",
+      title: "Planner & Logistics Controller",
+      company: "IDF — Masha 7200",
+      description: "Managed end-to-end inventory processes in a mission-critical military environment using SAP ERP.",
       highlights: [
-        "Engineered 97+ comprehensive automated tests spanning API and UI layers.",
-        "Intercepted 12 critical bugs pre-production using structured exploratory testing.",
-        "Integrated modern AI tools (Gemini, Ollama) for programmatic test creation."
+        "Owned data integrity for mission-critical inventory — identified and resolved discrepancies in real-time.",
+        "Coordinated with suppliers and production teams under strict operational deadlines.",
+        "Maintained 100% accountability across high-value asset tracking using SAP ERP."
       ],
-      type: "work" 
+      type: "work"
     },
     {
-      date: "2023 - 2024",
-      title: "QA & Automation Program — ATID College",
-      description: "Intensive training in modern software quality assurance and test automation.",
+      date: "2024 – 2025",
+      title: "Operations & Logistics Specialist",
+      company: "Various Companies (Manpower)",
+      description: "Executed logistics and inventory operations with high attention to detail and process discipline.",
       highlights: [
-        "Mastered Python and Playwright for UI automation.",
-        "Developed structured API testing methodologies using Postman.",
-        "Gained deep understanding of CI/CD pipelines and Docker containerization."
+        "Demonstrated consistency and reliability across multiple high-throughput environments.",
+        "Applied structured process thinking from industrial management background."
+      ],
+      type: "work"
+    },
+    {
+      date: "2024 – 2025",
+      title: "QA Automation & AI Bootcamp",
+      company: "Tech-Career",
+      description: "Intensive 800+ hour program covering Manual Testing, Automation, and AI-assisted QA.",
+      highlights: [
+        "Built a comprehensive E2E test automation framework using Python (OOP), Pytest, and Playwright.",
+        "Designed and executed REST API tests with Postman and integrated database validation via SQL.",
+        "Managed test artifacts, bug lifecycle, and documentation in an Agile environment (Jira, Xray)."
+      ],
+      type: "education"
+    },
+    {
+      date: "2018 – 2020",
+      title: "P.E. Industrial Management",
+      company: "The Joint College",
+      description: "Practical Engineering degree specializing in Operations Management and Information Systems.",
+      highlights: [
+        "Specialization in Operations Management and Information Systems.",
+        "Strong foundation in process optimization and data-driven decision-making."
       ],
       type: "education"
     }
@@ -104,18 +153,18 @@ export const PORTFOLIO_DATA = {
 
   education: [
     {
-      title: "QA & Test Automation Engineering",
-      issuer: "Tech Career / ATID College",
-      date: "2023-2024",
+      title: "QA Automation & AI Bootcamp",
+      issuer: "Tech-Career",
+      date: "2024–2025",
       icon: "GraduationCap",
       type: "education"
     },
     {
-      title: "ISTQB Certified Tester",
-      issuer: "ISTQB",
-      date: "2023",
-      icon: "Award",
-      type: "certification"
+      title: "P.E. Industrial Management",
+      issuer: "The Joint College",
+      date: "2018–2020",
+      icon: "GraduationCap",
+      type: "education"
     }
   ]
 };

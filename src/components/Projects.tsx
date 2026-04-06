@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { PORTFOLIO_DATA } from "../data/portfolio";
-import { FolderGit2, ExternalLink, Activity } from "lucide-react";
+import { FolderGit2, ExternalLink, Activity, BookOpen, Package } from "lucide-react";
 
 export default function Projects() {
     return (
@@ -67,14 +67,36 @@ export default function Projects() {
                                         ))}
                                     </div>
 
-                                    <a
-                                        href={project.githubUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 text-primary font-mono text-sm hover:underline hover:text-white transition-colors"
-                                    >
-                                        View Source Code <ExternalLink size={14} />
-                                    </a>
+                                    <div className="flex flex-wrap gap-4">
+                                        <a
+                                            href={project.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-2 text-primary font-mono text-sm hover:underline hover:text-white transition-colors"
+                                        >
+                                            View Source Code <ExternalLink size={14} />
+                                        </a>
+                                        {"allureUrl" in project && project.allureUrl && (
+                                            <a
+                                                href={project.allureUrl as string}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 text-success font-mono text-sm hover:underline hover:text-white transition-colors"
+                                            >
+                                                Allure Report <BookOpen size={14} />
+                                            </a>
+                                        )}
+                                        {"pypiUrl" in project && project.pypiUrl && (
+                                            <a
+                                                href={project.pypiUrl as string}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 text-warning font-mono text-sm hover:underline hover:text-white transition-colors"
+                                            >
+                                                PyPI Package <Package size={14} />
+                                            </a>
+                                        )}
+                                    </div>
                                 </div>
 
                                 {/* Project Metrics / Diagram Fallback */}

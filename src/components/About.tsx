@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView, useSpring, useTransform } from "framer-motion";
+import { motion, useInView, useSpring, useMotionValueEvent } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { PORTFOLIO_DATA } from "../data/portfolio";
 import { CheckCircle, Layers, TrendingUp, Bot } from "lucide-react";
@@ -18,11 +18,9 @@ const AnimatedNumber = ({ value }: { value: number }) => {
         }
     }, [isInView, spring, value]);
 
-    useEffect(() => {
-        return spring.onChange((latest) => {
-            setDisplayValue(Math.floor(latest));
-        });
-    }, [spring]);
+    useMotionValueEvent(spring, "change", (latest) => {
+        setDisplayValue(Math.floor(latest));
+    });
 
     return <span ref={ref}>{displayValue}</span>;
 }

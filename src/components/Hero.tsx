@@ -41,7 +41,7 @@ export default function Hero() {
                             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success"></span>
                         </span>
                         <span className="text-xs font-mono uppercase tracking-wider text-gray-300">
-                            Available for opportunities
+                            Open to connect
                         </span>
                     </motion.div>
 

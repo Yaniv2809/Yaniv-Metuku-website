@@ -82,20 +82,18 @@ export const PORTFOLIO_DATA = {
       title: "FixtureForge",
       badge: "PyPI PACKAGE",
       badgeColor: "violet",
-      description: "An agentic test-data harness for Python. Generates realistic, context-aware fixtures that catch real-world edge cases — deterministic and seed-controlled in CI, AI-powered in development. 100 users with 2 semantic fields = 2 API calls, not 200.",
-      techStack: ["Python", "Pydantic v2", "Faker", "Claude", "GPT", "Gemini", "Groq", "Ollama", "PyPI"],
+      description: "Stop writing 'Test User 1' and 'Lorem Ipsum'. FixtureForge generates realistic, context-aware test data using Google Gemini — produce 'Angry Customers' or 'High-Value Orders' with a single line of Python, and export directly to SQL, JSON, or CSV.",
+      techStack: ["Python", "Google Gemini", "SQL", "JSON", "CSV", "PyPI"],
       architectureHighlights: [
-        "Intelligent Field Routing: Structural → Faker → Computed → Semantic (LLM) — only semantic fields hit the AI",
-        "CI mode: seed= guarantees identical output across every run — zero network, zero cost",
-        "DataSwarms: parallel multi-model generation with shared AI cache — 5 models ≈ cost of 1.5",
-        "ForgeMemory: domain rules (e.g. 'max 3 active loans') persist across sessions and inject into prompts",
-        "Permission Gates: safe / sensitive / dangerous classification with env-var and interactive guards",
-        "ForgeDream: coverage-gap analysis — finds missing boundary-value and invalid-data rules automatically"
+        "Context-Aware Generation: prompt with 'angry customers' or 'high-value orders' — AI produces data that matches",
+        "Structured Export: outputs directly to SQL, JSON, or CSV — ready to seed any environment",
+        "Lazy Streaming: generates 1GB+ datasets record-by-record, never loads everything into memory",
+        "Smart Relationships: automatically links child records (Orders) to parent IDs (Customers) — no manual FK wiring"
       ],
       metrics: [
-        { label: "PyPI Version", value: "v0.1.2" },
-        { label: "Providers", value: "5+" },
-        { label: "CI Safe", value: "Yes" },
+        { label: "PyPI Version", value: "v2.0.1" },
+        { label: "AI Backend", value: "Gemini" },
+        { label: "Exports", value: "3" },
         { label: "Install", value: "pip" }
       ],
       githubUrl: "https://github.com/Yaniv2809/fixtureforge",

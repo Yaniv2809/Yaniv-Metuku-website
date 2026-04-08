@@ -79,25 +79,27 @@ export const PORTFOLIO_DATA = {
       diagramType: "pipeline"
     },
     {
-      title: "TestAxiom",
+      title: "FixtureForge",
       badge: "PyPI PACKAGE",
       badgeColor: "violet",
-      description: "A published Python testing utility package on PyPI. Built to streamline test assertion patterns and reduce boilerplate in Pytest-based automation projects — making test code cleaner, more readable, and easier to maintain.",
-      techStack: ["Python", "Pytest", "PyPI", "Test Utilities"],
+      description: "An agentic test-data harness for Python. Generates realistic, context-aware fixtures that catch real-world edge cases — deterministic and seed-controlled in CI, AI-powered in development. 100 users with 2 semantic fields = 2 API calls, not 200.",
+      techStack: ["Python", "Pydantic v2", "Faker", "Claude", "GPT", "Gemini", "Groq", "Ollama", "PyPI"],
       architectureHighlights: [
-        "Published to PyPI — installable via pip install testaxiom",
-        "Reduces assertion boilerplate across Pytest test suites",
-        "Designed for integration with existing automation frameworks",
-        "Complements Playwright and Requests-based test layers"
+        "Intelligent Field Routing: Structural → Faker → Computed → Semantic (LLM) — only semantic fields hit the AI",
+        "CI mode: seed= guarantees identical output across every run — zero network, zero cost",
+        "DataSwarms: parallel multi-model generation with shared AI cache — 5 models ≈ cost of 1.5",
+        "ForgeMemory: domain rules (e.g. 'max 3 active loans') persist across sessions and inject into prompts",
+        "Permission Gates: safe / sensitive / dangerous classification with env-var and interactive guards",
+        "ForgeDream: coverage-gap analysis — finds missing boundary-value and invalid-data rules automatically"
       ],
       metrics: [
-        { label: "Platform", value: "PyPI" },
-        { label: "Language", value: "Python" },
-        { label: "Type", value: "Utility" },
+        { label: "PyPI Version", value: "v0.1.2" },
+        { label: "Providers", value: "5+" },
+        { label: "CI Safe", value: "Yes" },
         { label: "Install", value: "pip" }
       ],
-      githubUrl: "https://github.com/Yaniv2809/TestAxiom",
-      pypiUrl: "https://pypi.org/project/testaxiom/",
+      githubUrl: "https://github.com/Yaniv2809/fixtureforge",
+      pypiUrl: "https://pypi.org/project/fixtureforge/",
       diagramType: "pipeline"
     }
   ],

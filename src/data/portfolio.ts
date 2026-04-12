@@ -107,12 +107,12 @@ export const PORTFOLIO_DATA = {
 
   experience: [
     {
-      date: "2022 – 2024",
+      date: "2026",
       title: "Robotics Instructor (Volunteer)",
       company: "Hamapilim School, Lod",
       description: "Designed and delivered robotics and programming lessons for 2nd-grade students as part of a STEM enrichment programme.",
       highlights: [
-        "Built structured lesson plans and hands-on exercises for groups of 15–20 students.",
+        "Built structured lesson plans and hands-on exercises for groups of 5-7 students.",
         "Applied the same documentation mindset used in QA: clear steps, expected outcomes, and verification.",
         "Demonstrated ability to break complex technical topics into verifiable, reproducible steps."
       ],
@@ -142,7 +142,7 @@ export const PORTFOLIO_DATA = {
       type: "work"
     },
     {
-      date: "2024 – 2025",
+      date: "2025 – 2026",
       title: "QA Automation & AI Bootcamp",
       company: "Tech-Career",
       description: "Intensive 800+ hour program covering Manual Testing, Automation, and AI-assisted QA.",
@@ -170,14 +170,14 @@ export const PORTFOLIO_DATA = {
     {
       title: "QA Automation & AI Bootcamp",
       issuer: "Tech-Career",
-      date: "2024–2025",
+      date: "2025 – 2026",
       icon: "GraduationCap",
       type: "education"
     },
     {
       title: "P.E. Industrial Management",
       issuer: "The Joint College",
-      date: "2018–2020",
+      date: "2018 – 2020",
       icon: "GraduationCap",
       type: "education"
     }

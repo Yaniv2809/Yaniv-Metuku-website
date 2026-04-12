@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { PORTFOLIO_DATA } from "../data/portfolio";
 import { CheckCircle, Layers, TrendingUp, Bot } from "lucide-react";
+import { GitHubCalendar } from "react-github-calendar";
 
 // Helper component for animated numbers
 const AnimatedNumber = ({ value }: { value: number }) => {
@@ -83,6 +84,29 @@ export default function About() {
                     </div>
 
                 </div>
+
+                {/* GitHub Activity Calendar */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="mt-16 glass-panel rounded-2xl p-6 md:p-8 border border-gray-800"
+                >
+                    <h3 className="font-mono text-sm text-gray-500 uppercase tracking-widest mb-6">
+                        GitHub Activity
+                    </h3>
+                    <div className="overflow-x-auto">
+                        <GitHubCalendar
+                            username="Yaniv2809"
+                            colorScheme="dark"
+                            fontSize={12}
+                            blockSize={13}
+                            blockMargin={4}
+                        />
+                    </div>
+                </motion.div>
+
             </div>
         </section>
     );

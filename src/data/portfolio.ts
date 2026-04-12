@@ -27,7 +27,8 @@ export const PORTFOLIO_DATA = {
     apiData: ["Postman", "REST APIs", "SQL", "MySQL", "MongoDB", "Data Validation"],
     devops: ["GitHub Actions", "Docker", "Jenkins", "CI/CD Pipelines"],
     ai: ["Groq API", "Local LLMs (Ollama)", "Prompt Engineering", "AI Failure Analysis"],
-    management: ["Jira", "Xray", "Test Strategy", "Root Cause Analysis"]
+    management: ["Jira", "Xray", "Test Strategy", "Root Cause Analysis"],
+    methodologies: ["STP / STD / STR", "Bug Lifecycle", "Risk-Based Testing", "Shift-Left Testing", "Agile / Scrum", "ISTQB Principles"]
   },
 
   projects: [
@@ -105,6 +106,18 @@ export const PORTFOLIO_DATA = {
   ],
 
   experience: [
+    {
+      date: "2022 – 2024",
+      title: "Robotics Instructor (Volunteer)",
+      company: "Hamapilim School, Lod",
+      description: "Designed and delivered robotics and programming lessons for 2nd-grade students as part of a STEM enrichment programme.",
+      highlights: [
+        "Built structured lesson plans and hands-on exercises for groups of 15–20 students.",
+        "Applied the same documentation mindset used in QA: clear steps, expected outcomes, and verification.",
+        "Demonstrated ability to break complex technical topics into verifiable, reproducible steps."
+      ],
+      type: "volunteer"
+    },
     {
       date: "2020 – 2022",
       title: "Planner & Logistics Controller(Deputy Team Lead)",

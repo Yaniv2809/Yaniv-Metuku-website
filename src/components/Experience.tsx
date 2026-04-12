@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 import { PORTFOLIO_DATA } from "../data/portfolio";
-import { Briefcase, GraduationCap, ChevronRight } from "lucide-react";
+import { Briefcase, GraduationCap, ChevronRight, Users } from "lucide-react";
 
 export default function Experience() {
     return (
         <section id="experience" className="py-24 relative z-10">
+            <div className="absolute top-0 left-0 w-full glow-divider"></div>
             <div className="max-w-7xl mx-auto px-6">
 
                 <div className="mb-16">
@@ -38,10 +39,14 @@ export default function Experience() {
                                     <div className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center border-2 ${
                                         item.type === "education"
                                             ? "border-warning bg-warning/10"
+                                            : item.type === "volunteer"
+                                            ? "border-violet-500 bg-violet-500/10"
                                             : "border-primary bg-primary/10"
                                     }`}>
                                         {item.type === "education"
                                             ? <GraduationCap className="text-warning w-5 h-5 md:w-6 md:h-6" />
+                                            : item.type === "volunteer"
+                                            ? <Users className="text-violet-400 w-5 h-5 md:w-6 md:h-6" />
                                             : <Briefcase className="text-primary w-5 h-5 md:w-6 md:h-6" />
                                         }
                                     </div>

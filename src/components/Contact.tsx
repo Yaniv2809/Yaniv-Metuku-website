@@ -52,9 +52,9 @@ const links = [
     },
     {
         icon: <Terminal className="w-5 h-5" />,
-        label: "PyPI — testaxiom",
-        value: "pypi.org/project/testaxiom",
-        href: "https://pypi.org/project/testaxiom/",
+        label: "PyPI — fixtureforge",
+        value: "pypi.org/project/fixtureforge",
+        href: "https://pypi.org/project/fixtureforge/",
         color: "text-warning",
         border: "border-warning/30",
         hover: "hover:border-warning hover:bg-warning/5"

@@ -10,7 +10,11 @@ export default function Hero() {
     const fullTitle = PORTFOLIO_DATA.personalInfo.title;
 
     useEffect(() => {
-        // Typewriter effect for the title
+        // Skip animation for users who prefer reduced motion
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            setTypedTitle(fullTitle);
+            return;
+        }
         let currentIndex = 0;
         const typingInterval = setInterval(() => {
             if (currentIndex <= fullTitle.length) {

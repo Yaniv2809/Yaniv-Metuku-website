@@ -19,10 +19,11 @@ export default function Skills() {
     };
 
     const skillCategories = [
-        { title: "Test Automation", data: PORTFOLIO_DATA.skills.automation, color: "text-primary", border: "border-primary/30", bg: "hover:bg-primary/10" },
-        { title: "API & Infrastructure", data: PORTFOLIO_DATA.skills.apiData, color: "text-success", border: "border-success/30", bg: "hover:bg-success/10" },
-        { title: "AI Integration", data: PORTFOLIO_DATA.skills.ai, color: "text-warning", border: "border-warning/30", bg: "hover:bg-warning/10" },
-        { title: "DevOps & Management", data: PORTFOLIO_DATA.skills.devops, color: "text-gray-300", border: "border-gray-500/30", bg: "hover:bg-gray-500/10" }
+        { title: "Test Automation", data: PORTFOLIO_DATA.skills.automation, color: "text-primary", border: "border-primary/30", bg: "hover:bg-primary/10", span: false },
+        { title: "API & Infrastructure", data: PORTFOLIO_DATA.skills.apiData, color: "text-success", border: "border-success/30", bg: "hover:bg-success/10", span: false },
+        { title: "AI Integration", data: PORTFOLIO_DATA.skills.ai, color: "text-warning", border: "border-warning/30", bg: "hover:bg-warning/10", span: false },
+        { title: "DevOps & Management", data: PORTFOLIO_DATA.skills.devops, color: "text-gray-300", border: "border-gray-500/30", bg: "hover:bg-gray-500/10", span: false },
+        { title: "QA Methodologies", data: PORTFOLIO_DATA.skills.methodologies, color: "text-violet-400", border: "border-violet-500/30", bg: "hover:bg-violet-500/10", span: true },
     ];
 
     return (
@@ -51,9 +52,9 @@ export default function Skills() {
                         <motion.div
                             key={cat.title}
                             variants={itemVariants}
-                            className="glass-panel p-8 rounded-2xl relative overflow-hidden group"
+                            className={`glass-panel p-8 rounded-2xl relative overflow-hidden group ${cat.span ? "md:col-span-2" : ""}`}
                         >
-                            <div className={`absolute top-0 left-0 w-1 h-full opacity-50 transition-all duration-300 group-hover:opacity-100 ${i === 0 ? "bg-primary" : i === 1 ? "bg-success" : i === 2 ? "bg-warning" : "bg-gray-500"
+                            <div className={`absolute top-0 left-0 w-1 h-full opacity-50 transition-all duration-300 group-hover:opacity-100 ${i === 0 ? "bg-primary" : i === 1 ? "bg-success" : i === 2 ? "bg-warning" : i === 4 ? "bg-violet-500" : "bg-gray-500"
                                 }`}></div>
 
                             <h3 className={`text-xl font-mono font-bold mb-6 ${cat.color}`}>

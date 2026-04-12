@@ -26,30 +26,45 @@ export default function TestDashboard() {
     const [isKonamiActive, setIsKonamiActive] = useState(false);
 
     useEffect(() => {
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
         // Regular execution simulation
         let currentProgress = 0;
-        const interval = setInterval(() => {
-            currentProgress += 2.5;
-            setProgress(Math.min(currentProgress, 100));
-
-            if (currentProgress >= 100) {
-                clearInterval(interval);
-            }
-        }, 100);
+        let interval: ReturnType<typeof setInterval> | undefined;
+        if (!reducedMotion) {
+            interval = setInterval(() => {
+                currentProgress += 2.5;
+                setProgress(Math.min(currentProgress, 100));
+                if (currentProgress >= 100) clearInterval(interval);
+            }, 100);
+        }
 
         // Staggered test appearance
         const timeouts: NodeJS.Timeout[] = [];
 
-        // Reset statuses
-        setTests(prev => prev.map(t => ({ ...t, status: "pending" })));
+        if (reducedMotion) {
+            // Show final state immediately
+            setProgress(100);
+            setTests([
+                { id: "t1", name: "API Authentication Flow", status: "passed", duration: 0.34 },
+                { id: "t2", name: "Database Integrity Check", status: "passed", duration: 1.12 },
+                { id: "t3", name: "Cross-Layer Data Validation", status: "passed", duration: 0.87 },
+                { id: "t4", name: "CI/CD Pipeline Trigger", status: "passed", duration: 2.01 },
+                { id: "t5", name: "Performance SLA Threshold", status: "warning", duration: 3.45 },
+                { id: "t6", name: "AI Failure Classification", status: "passed", duration: 0.56 },
+            ]);
+        } else {
+            // Reset statuses
+            setTests(prev => prev.map(t => ({ ...t, status: "pending" })));
 
-        // Schedule each test resolution
-        timeouts.push(setTimeout(() => updateTestStatus("t1", "passed"), 600));
-        timeouts.push(setTimeout(() => updateTestStatus("t2", "passed"), 1400));
-        timeouts.push(setTimeout(() => updateTestStatus("t3", "passed"), 2100));
-        timeouts.push(setTimeout(() => updateTestStatus("t4", "passed"), 2800));
-        timeouts.push(setTimeout(() => updateTestStatus("t5", "warning"), 3300));
-        timeouts.push(setTimeout(() => updateTestStatus("t6", "passed"), 4000));
+            // Schedule each test resolution
+            timeouts.push(setTimeout(() => updateTestStatus("t1", "passed"), 600));
+            timeouts.push(setTimeout(() => updateTestStatus("t2", "passed"), 1400));
+            timeouts.push(setTimeout(() => updateTestStatus("t3", "passed"), 2100));
+            timeouts.push(setTimeout(() => updateTestStatus("t4", "passed"), 2800));
+            timeouts.push(setTimeout(() => updateTestStatus("t5", "warning"), 3300));
+            timeouts.push(setTimeout(() => updateTestStatus("t6", "passed"), 4000));
+        }
 
         // Handle Easter Egg
         const handleKonami = () => {

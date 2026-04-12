@@ -5,10 +5,12 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import CursorTrail from "@/components/ui/CursorTrail";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import ParticleBackground from "@/components/ui/ParticleBackground";
 import KonamiEasterEgg from "@/components/ui/KonamiEasterEgg";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 
 export default function Home() {
   return (
@@ -18,6 +20,7 @@ export default function Home() {
       <ScrollProgress />
       <ParticleBackground />
       <KonamiEasterEgg />
+      <ScrollToTop />
 
       {/* Pages */}
       <Navbar />
@@ -27,16 +30,7 @@ export default function Home() {
       <Projects />
       <Experience />
       <Contact />
-
-      {/* Simple Footer directly in page for now */}
-      <footer className="py-8 text-center border-t border-gray-800/50 mt-20 relative z-10 glass-panel">
-        <p className="font-mono text-sm text-gray-500">
-          Built with Next.js, Tailwind & AI. <br className="md:hidden" />
-          <span className="hidden md:inline"> | </span>
-          All systems operational.
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 }
-

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { PORTFOLIO_DATA } from "../data/portfolio";
 import { FolderGit2, ExternalLink, Activity, BookOpen, Package } from "lucide-react";
+import GitHubRepoCard from "./ui/GitHubRepoCard";
 
 export default function Projects() {
     return (
@@ -115,6 +116,11 @@ export default function Projects() {
                                 </div>
 
                             </div>
+
+                            {/* GitHub live stats — flagship project only */}
+                            {index === 0 && (
+                                <GitHubRepoCard githubUrl={project.githubUrl} />
+                            )}
                         </motion.div>
                     ))}
                 </div>

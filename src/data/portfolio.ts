@@ -2,7 +2,7 @@ export const PORTFOLIO_DATA = {
   personalInfo: {
     name: "Yaniv Metuku",
     title: "AI-Powered QA Automation Engineer",
-    tagline: "2 PyPI packages shipped. 53 automated tests across 4 layers. AI-powered failure analysis built in. All before my first full-time QA role.",
+    tagline: "2 PyPI packages shipped. 53 automated tests across 4 layers. AI-powered failure analysis built in.",
     email: "yaniv2809@gmail.com",
     phone: "",
     location: "Israel",

@@ -9,7 +9,7 @@ export const PORTFOLIO_DATA = {
     github: "https://github.com/Yaniv2809",
     linkedin: "https://www.linkedin.com/in/yaniv-metuku/",
     profileImage: "/avatar.png",
-    cvDownloadLink: "/Yaniv-Metuku-CV.pdf"
+    cvDownloadLink: "/Yaniv_Metuku_CV_General.pdf"
   },
 
   about: {

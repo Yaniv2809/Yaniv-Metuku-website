@@ -166,6 +166,88 @@ export const PORTFOLIO_DATA = {
     }
   ],
 
+  networkSecurityProjects: [
+    {
+      title: "NetProbe-QA",
+      badge: "NETWORK QE",
+      badgeColor: "sky",
+      description:
+        "Automated quality gate for a REST network-probe API. Validates endpoint " +
+        "correctness, error handling, and data integrity using pytest + Requests. " +
+        "Covers status codes, JSON schema, boundary values, and fault-injection — " +
+        "CI runs on every push via GitHub Actions with full Allure reporting.",
+      techStack: ["Python", "Pytest", "Requests", "Allure", "GitHub Actions", "Docker"],
+      highlights: [
+        "Schema validation: every response field type-checked against a Pydantic model",
+        "Fault injection: tests for 4xx/5xx behaviour, malformed payloads, and empty bodies",
+        "Boundary-value analysis on numeric probe parameters",
+        "CI/CD: GitHub Actions runs the full suite on push; Allure report published to GitHub Pages",
+        "Parametrised fixtures — zero duplicated test logic across 20+ cases"
+      ],
+      metrics: [
+        { label: "Test Cases", value: "20+" },
+        { label: "Coverage", value: "API" },
+        { label: "CI", value: "GitHub Actions" },
+        { label: "Reports", value: "Allure" }
+      ],
+      githubUrl: "https://github.com/Yaniv2809/NetProbe-QA",
+      allureUrl: "https://yaniv2809.github.io/NetProbe-QA/"
+    },
+    {
+      title: "PacketSentry",
+      badge: "TRAFFIC ANALYSIS QE",
+      badgeColor: "amber",
+      description:
+        "Automated validation suite for a packet-capture and traffic-analysis service. " +
+        "Tests inspect live-capture correctness, filter logic, protocol parsing, and " +
+        "alert thresholds — verifying that zero packets are dropped or mis-classified " +
+        "under load. Full pytest suite with Docker-isolated capture environment.",
+      techStack: ["Python", "Pytest", "Docker", "Scapy", "Allure", "GitHub Actions"],
+      highlights: [
+        "Live-capture assertions: confirms packets are captured, not just acknowledged",
+        "Filter-logic tests: BPF expressions validated against known traffic patterns",
+        "Protocol parsing: UDP / TCP / ICMP frames parsed and field-level verified",
+        "Threshold tests: alert fires at configured packet-rate boundary — not before, not after",
+        "Docker-isolated environment: repeatable captures with zero host-traffic noise"
+      ],
+      metrics: [
+        { label: "Test Cases", value: "15+" },
+        { label: "Protocols", value: "3" },
+        { label: "Environment", value: "Docker" },
+        { label: "Reports", value: "Allure" }
+      ],
+      githubUrl: "https://github.com/Yaniv2809/PacketSentry",
+      allureUrl: "https://yaniv2809.github.io/PacketSentry/"
+    },
+    {
+      title: "VPN-QE-Lab",
+      badge: "IPSEC / SD-WAN QE",
+      badgeColor: "emerald",
+      description:
+        "Self-contained IPSec VPN quality gate: spins up two strongSwan IKEv2 gateways " +
+        "in Docker, establishes a full site-to-site tunnel, then runs 9 automated tests " +
+        "covering IKE Phase 1 & 2, bidirectional routing, traffic encryption, and NAT " +
+        "Traversal (ESP-in-UDP). Mirrors a real-world SD-WAN deployment scenario.",
+      techStack: ["Python", "Pytest", "Docker", "strongSwan", "IKEv2", "XFRM", "tcpdump", "Allure", "GitHub Actions"],
+      highlights: [
+        "IKE Phase 1 & 2: asserts ESTABLISHED + INSTALLED SA state via ipsec statusall",
+        "Bidirectional routing: ping 100.64.1.1 ↔ 100.64.2.1 through encrypted tunnel — 0% packet loss",
+        "Encryption proof: tcpdump on WAN confirms UDP/4500 traffic — zero plaintext ICMP",
+        "NAT-T validation: ip xfrm state show asserts espinudp encapsulation in kernel",
+        "forceencaps=yes simulates SD-WAN behind carrier NAT (ESP protocol 50 blocked)",
+        "CI/CD: full compose up → await ESTABLISHED → run 9 tests → compose down on every push"
+      ],
+      metrics: [
+        { label: "Test Cases", value: "9" },
+        { label: "Protocol", value: "IKEv2 / ESP" },
+        { label: "Suites", value: "3 files" },
+        { label: "Reports", value: "Allure" }
+      ],
+      githubUrl: "https://github.com/Yaniv2809/VPN-QE-Lab",
+      allureUrl: "https://yaniv2809.github.io/VPN-QE-Lab/"
+    }
+  ],
+
   education: [
     {
       title: "QA Automation & AI Bootcamp",

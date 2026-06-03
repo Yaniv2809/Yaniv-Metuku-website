@@ -32,7 +32,9 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "glass-panel shadow-lg py-3" : "bg-transparent py-5"
+        isScrolled
+          ? "glass-panel shadow-lg py-3"
+          : "bg-gray-950/80 backdrop-blur-sm py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -44,17 +46,18 @@ export default function Navbar() {
           </span>
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop nav — visible from lg (1024px) up */}
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="font-mono text-sm hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-200"
+              className="font-mono text-sm hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-200 whitespace-nowrap"
             >
               {link.name}
             </a>
           ))}
-          
+
           {mounted && (
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -64,25 +67,28 @@ export default function Navbar() {
               {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
             </button>
           )}
-          
+
           <a
             href="#contact"
-            className="border border-primary text-primary px-4 py-2 rounded-md font-mono text-sm hover:bg-primary hover:text-background transition-all"
+            className="border border-primary text-primary px-4 py-2 rounded-md font-mono text-sm hover:bg-primary hover:text-background transition-all whitespace-nowrap"
           >
             Connect
           </a>
         </div>
 
+        {/* Hamburger — visible below lg */}
         <button
-          className="md:hidden text-foreground p-2"
+          className="lg:hidden text-gray-200 p-2 hover:text-primary transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Open menu"
         >
-          {mobileMenuOpen ? <X /> : <Menu />}
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
+      {/* Mobile dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full glass-panel border-t border-gray-800/50 flex flex-col p-6 gap-4">
+        <div className="lg:hidden absolute top-full left-0 w-full glass-panel border-t border-gray-800/50 flex flex-col p-6 gap-4">
           {navLinks.map((link) => (
             <a
               key={link.name}

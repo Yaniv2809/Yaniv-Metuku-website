@@ -9,12 +9,14 @@ const badgeClasses: Record<string, string> = {
     sky:     "border-sky-400 text-sky-400 bg-sky-400/10",
     amber:   "border-amber-400 text-amber-400 bg-amber-400/10",
     emerald: "border-emerald-400 text-emerald-400 bg-emerald-400/10",
+    violet:  "border-violet-400 text-violet-400 bg-violet-400/10",
 };
 
 const accentClasses: Record<string, string> = {
     sky:     "bg-sky-400/5 group-hover:bg-sky-400/10",
     amber:   "bg-amber-400/5 group-hover:bg-amber-400/10",
     emerald: "bg-emerald-400/5 group-hover:bg-emerald-400/10",
+    violet:  "bg-violet-400/5 group-hover:bg-violet-400/10",
 };
 
 export default function NetworkSecurityProjects() {

@@ -245,6 +245,34 @@ export const PORTFOLIO_DATA = {
       ],
       githubUrl: "https://github.com/Yaniv2809/VPN-QE-Lab",
       allureUrl: "https://yaniv2809.github.io/VPN-QE-Lab/"
+    },
+    {
+      title: "VectorGuard",
+      badge: "AI SECURITY QE",
+      badgeColor: "violet",
+      description:
+        "Shift-Left security testing framework for Retrieval-Augmented Generation (RAG) pipelines. " +
+        "Evaluates LLM systems against OWASP LLM Top 10 — detecting prompt injections, " +
+        "cross-tenant data leakage (BOLA), and PII disclosure before they reach production. " +
+        "Uses Yaniv's own FixtureForge to generate adversarial payloads including Base64-obfuscated " +
+        "and multilingual (Hebrew) injections.",
+      techStack: ["Python", "Pytest", "ChromaDB", "Ollama", "Llama 3.2", "FixtureForge", "Docker", "Allure", "GitHub Actions"],
+      highlights: [
+        "LLM01 — Prompt Injection: detects direct, Base64-obfuscated, and Hebrew-language injections in RAG context",
+        "LLM02 — Insecure Output: validates ChromaDB metadata filtering blocks cross-tenant (BOLA) data extraction",
+        "LLM06 — PII Disclosure: LLM-as-a-Judge (Llama 3.2 via Ollama) scans output for SSNs and account numbers before delivery",
+        "Synthetic poisoning: FixtureForge generates realistic financial datasets pre-seeded with adversarial payloads",
+        "Fully dockerised: docker-compose up → ChromaDB + Ollama + test suite, zero manual setup",
+        "CI/CD: GitHub Actions runs the full suite on push; Allure security report published to GitHub Pages"
+      ],
+      metrics: [
+        { label: "OWASP Coverage", value: "3 / 10" },
+        { label: "LLM Backend", value: "Llama 3.2" },
+        { label: "Version", value: "v1.1" },
+        { label: "Reports", value: "Allure" }
+      ],
+      githubUrl: "https://github.com/Yaniv2809/vectorguard",
+      allureUrl: "https://yaniv2809.github.io/vectorguard"
     }
   ],
 
